@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "testcafe chrome tests/hmTest1"
+    "test": "testcafe chrome tests/hmTest1.js"
   },
   "devDependencies": {
     "testcafe": "*",
