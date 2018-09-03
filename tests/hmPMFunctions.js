@@ -5,5 +5,13 @@ import { ClientFunction } from 'testcafe';
 export default class Functions {
   constructor() {
     this.getPageUrl             = ClientFunction(() => window.location.href);
+    
+    this.randomInt             =
+      function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
   }
 }
+
+
