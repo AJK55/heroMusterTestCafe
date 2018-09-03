@@ -1,5 +1,5 @@
 language: node_js
-node_js: "7"
+node_js: "8"
 
 before_install:
   - stty cols 80
@@ -18,3 +18,10 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3
+
+notifications:
+  email:
+    recipients:
+      - anthonyklinga@gmail.com
+    on_success: always # default: change
+    on_failure: always # default: always
