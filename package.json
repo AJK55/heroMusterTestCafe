@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "testcafe chrome hmTest1"
+  },
+  "devDependencies": {
+    "testcafe": "*",
+    "testcafe-browser-provider-saucelabs": "^1.3.1"
+  }
+}
