@@ -76,8 +76,9 @@ test('Complete Form', async t=> {
     .typeText(page.protection, page.protectionValue.toString())
   await t
     .click(page.perks1)
-    .click(page.perks[Math.floor(Math.random()*page.perks.length)])  
+    .click(page.perksDrop1[Math.floor(Math.random()*page.perksDrop1.length)]) 
   await t
     .click(page.perks2)
+    .click(page.perksDrop2[Math.floor(Math.random()*page.perksDrop2.length)]) 
     
 });
