@@ -1,10 +1,8 @@
 import { Selector} from 'testcafe'
 import Page from './hmPageModel';
 import Functions from './hmPMFunctions';
-
 const page = new Page();
 const func = new Functions();
-
 
 fixture('HeroMuster Chracter Builder Form')
   .page(page.homeURL);
@@ -85,5 +83,8 @@ test('Complete Form', async t=> {
   await t
     .click(page.flwas2)
     .click(page.flawsDrop2[Math.floor(Math.random()*page.flawsDrop2.length)])
-
+  await t
+    .click(page.saveCharacter)
+    .wait(10000)
+     
 });
