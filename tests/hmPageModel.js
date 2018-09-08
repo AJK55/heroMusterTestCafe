@@ -70,10 +70,11 @@ export default class Page {
       this.perks1         = Selector('#perks > div:nth-child(1) > div > div.selectize-input.items.not-full.has-options'),
       this.perks2         = Selector('#perks > div:nth-child(2) > div > div.selectize-input.items.not-full.has-options'),
       this.flaws1         = Selector('#flaws > div:nth-child(1) > div > div.selectize-input.items.not-full.has-options'),
-      this.flwas2         = Selector('#flaws > div:nth-child(2) > div > div.selectize-input.items.not-full.has-options')
+      this.flwas2         = Selector('#flaws > div:nth-child(2) > div > div.selectize-input.items.not-full.has-options'),
+      this.saveCharacter  = Selector('#save')
 ];
     
-this.perksDrop1 = [
+    this.perksDrop1 = [
   this.ageless                = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(1)'),
   this.artisan                = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(2)'),
   this.ascetic                = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(3)'),
@@ -111,7 +112,7 @@ this.perksDrop1 = [
   this.whispererOfTheWild     = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(35)')
     ];
     
-this.perksDrop2 = [
+    this.perksDrop2 = [
   this.ageless                = Selector('#perks > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(1)'),
   this.artisan                = Selector('#perks > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(2)'),
   this.ascetic                = Selector('#perks > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(3)'),
@@ -149,7 +150,7 @@ this.perksDrop2 = [
   this.whispererOfTheWild     = Selector('#perks > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(35)')
 ];
 
-this.flawsDrop1 = [
+    this.flawsDrop1 = [
   this.absentMinded       = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(1)'),
   this.addiction          = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(2)'),
   this.ambitious          = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(3)'),
@@ -183,7 +184,7 @@ this.flawsDrop1 = [
   this.zealous            = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(31)')
 ];
     
-this.flawsDrop2 = [
+    this.flawsDrop2 = [
   this.absentMinded       = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(1)'),
   this.addiction          = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(2)'),
   this.ambitious          = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(3)'),
