@@ -5,11 +5,11 @@ import Functions from './hmPMFunctions';
 const page = new Page();
 const func = new Functions();
 
-//randomly selects from page.archetypes
-var archeT = page.archetypes[Math.floor(Math.random()*page.archetypes.length)];
+//randomly selects from page.archetypes = page.archetypes[Math.floor(Math.random()*page.archetypes.length)];
 
 fixture('HeroMuster Chracter Builder Form')
   .page(page.homeURL);
+
 
 test('Confirm Page', async t=> {
   await t
@@ -32,7 +32,8 @@ test('Complete Form', async t=> {
   await t
     .typeText(page.characterName, page.characterNameText)
   await t
-    .typeText(page.archetype, archeT)
+    .typeText(page.archetype, page.archetypes[Math.floor(Math.random()*page.archetypes.length)])
+  //randomly selects from page.archetypes = page.archetypes[Math.floor(Math.random()*page.archetypes.length)];
   await t
     .typeText(page.level, page.levelText.toString())
   await t
@@ -73,5 +74,10 @@ test('Complete Form', async t=> {
     .typeText(page.prescience, page.prescienceValue.toString())
   await t
     .typeText(page.protection, page.protectionValue.toString())
+  await t
+    .click(page.perks1)
+    .click(page.perks[Math.floor(Math.random()*page.perks.length)])  
+  await t
+    .click(page.perks2)
     
 });

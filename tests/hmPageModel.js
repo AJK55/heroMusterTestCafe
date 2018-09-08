@@ -16,7 +16,10 @@ export default class Page {
       this.playerNameText     = "Test" + Math.random().toString(36).substr(2, 5),
       this.characterNameText  = "Test" + Math.random().toString(36).substr(2, 5),
       this.levelText          = func.randomInt(1, 90),
-      this.descriptionText    = "Roman emperor from 161 to 180. He ruled with his adoptive brother, Lucius Verus, until Verus' death in 169, and with his son, Commodus, from 177. He was the last of the rulers traditionally known as the Five Good Emperors.",
+      this.descriptionText    = "Roman emperor from 161 to 180. He ruled with his adoptive brother, Lucius Verus, until Verus' death in 169, and with his son, Commodus, from 177. He was the last of the rulers traditionally known as the Five Good Emperors."
+      ];
+    
+    this.attributes = [
       this.agilityValue       = func.randomInt(0, 2),
       this.fortitudeValue     = func.randomInt(0, 2),
       this.mightValue         = func.randomInt(0, 2),
@@ -63,8 +66,48 @@ export default class Page {
       this.influence      = Selector('#influence'), 
       this.movement       = Selector('#movement'), 
       this.prescience     = Selector('#prescience'), 
-      this.protection     = Selector('#protection')
+      this.protection     = Selector('#protection'),
+      this.perks1         = Selector('#perks > div:nth-child(1) > div > div.selectize-input.items.not-full.has-options'),
+      this.perks2         = Selector('#perks > div:nth-child(2) > div > div.selectize-input.items.not-full.has-options')
 ];
+    
+    this.perks = [
+this.ageless                = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(1)'),
+this.artisan                = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(2)'),
+this.ascetic                = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(3)'),
+this.attractive             = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(4)'),
+this.brute                  = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(5)'),
+this.courageous             = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(6)'),
+this.crowdFavorite          = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(7)'),
+this.diseaseImmunity        = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(8)'),
+this.divinegent             = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(9)'),
+this.divineInsight          = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(10)'),
+this.earOfTheEmperor        = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(11)'),
+this.extraordinaryPresence  = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(12)'),
+this.fugitive               = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(13)'),
+this.idol                   = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(14)'),
+this.innocent               = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(15)'),
+this.jackOfAllTrades        = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(16)'),
+this.legendaryBloodline     = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(17)'),
+this.localHero              = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(18)'),
+this.lucky                  = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(19)'),
+this.merchant               = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(20)'),
+this.naturesAlly            = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(21)'),
+this.observant              = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(22)'),
+this.profession             = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(23)'),
+this.pureHearted            = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(24)'),
+this.resilient              = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(25)'),
+this.scavenger              = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(26)'),
+this.scent                  = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(27)'),
+this.scholar                = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(28)'),
+this.silverTongue           = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(29)'),
+this.stoneSense             = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(30)'),
+this.streetRat              = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(31)'),
+this.upperClass             = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(32)'),
+this.vagabond               = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(33)'),
+this.warriorsCode           = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(34)'),
+this.whispererOfTheWild     = Selector('#perks > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(35)')
+    ];
     
     this.archetypes = [
       'Spideren',
