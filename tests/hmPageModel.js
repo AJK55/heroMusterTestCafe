@@ -68,7 +68,9 @@ export default class Page {
       this.prescience     = Selector('#prescience'), 
       this.protection     = Selector('#protection'),
       this.perks1         = Selector('#perks > div:nth-child(1) > div > div.selectize-input.items.not-full.has-options'),
-      this.perks2         = Selector('#perks > div:nth-child(2) > div > div.selectize-input.items.not-full.has-options')
+      this.perks2         = Selector('#perks > div:nth-child(2) > div > div.selectize-input.items.not-full.has-options'),
+      this.flaws1         = Selector('#flaws > div:nth-child(1) > div > div.selectize-input.items.not-full.has-options'),
+      this.flwas2         = Selector('#flaws > div:nth-child(2) > div > div.selectize-input.items.not-full.has-options')
 ];
     
 this.perksDrop1 = [
@@ -146,6 +148,75 @@ this.perksDrop2 = [
   this.warriorsCode           = Selector('#perks > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(34)'),
   this.whispererOfTheWild     = Selector('#perks > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(35)')
 ];
+
+this.flawsDrop1 = [
+  this.absentMinded       = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(1)'),
+  this.addiction          = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(2)'),
+  this.ambitious          = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(3)'),
+  this.bloodlust          = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(4)'),
+  this.brash              = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(5)'),
+  this.bravado            = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(6)'),
+  this.cosmeticDeformity  = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(7)'),
+  this.compulsion         = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(8)'),
+  this.cowardly           = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(9)'),
+  this.dimwitted          = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(10)'),
+  this.disabled           = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(11)'),
+  this.greedy             = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(12)'),
+  this.honest             = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(13)'),
+  this.hotTempered        = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(14)'),
+  this.illiterate         = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(15)'),
+  this.literalMinded      = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(16)'),
+  this.moodDisorder       = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(17)'),
+  this.naïve              = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(18)'),
+  this.overt              = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(19)'),
+  this.overweight         = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(20)'),
+  this.pacifist           = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(21)'),
+  this.phobia             = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(22)'),
+  this.proud              = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(23)'),
+  this.psychotic          = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(24)'),
+  this.shortWinded        = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(25)'),
+  this.sick               = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(26)'),
+  this.sociallyAwkward    = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(27)'),
+  this.stubborn           = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(28)'),
+  this.uncoordinated      = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(29)'),
+  this.vengeful           = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(30)'),
+  this.zealous            = Selector('#flaws > div:nth-child(1) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(31)')
+];
+    
+this.flawsDrop2 = [
+  this.absentMinded       = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(1)'),
+  this.addiction          = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(2)'),
+  this.ambitious          = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(3)'),
+  this.bloodlust          = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(4)'),
+  this.brash              = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(5)'),
+  this.bravado            = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(6)'),
+  this.cosmeticDeformity  = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(7)'),
+  this.compulsion         = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(8)'),
+  this.cowardly           = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(9)'),
+  this.dimwitted          = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(10)'),
+  this.disabled           = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(11)'),
+  this.greedy             = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(12)'),
+  this.honest             = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(13)'),
+  this.hotTempered        = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(14)'),
+  this.illiterate         = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(15)'),
+  this.literalMinded      = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(16)'),
+  this.moodDisorder       = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(17)'),
+  this.naïve              = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(18)'),
+  this.overt              = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(19)'),
+  this.overweight         = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(20)'),
+  this.pacifist           = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(21)'),
+  this.phobia             = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(22)'),
+  this.proud              = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(23)'),
+  this.psychotic          = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(24)'),
+  this.shortWinded        = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(25)'),
+  this.sick               = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(26)'),
+  this.sociallyAwkward    = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(27)'),
+  this.stubborn           = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(28)'),
+  this.uncoordinated      = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(29)'),
+  this.vengeful           = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(30)'),
+  this.zealous            = Selector('#flaws > div:nth-child(2) > div > div.selectize-dropdown.single.form-control.selectize.save > div > div:nth-child(31)')
+];   
+
     
     this.archetypes = [
       'Spideren',

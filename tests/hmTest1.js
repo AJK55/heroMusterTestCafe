@@ -80,5 +80,11 @@ test('Complete Form', async t=> {
   await t
     .click(page.perks2)
     .click(page.perksDrop2[Math.floor(Math.random()*page.perksDrop2.length)]) 
+  await t
+    .click(page.flaws1)
+    .click(page.flawsDrop1[Math.floor(Math.random()*page.flawsDrop1.length)])
+  await t
+    .click(page.flwas2)
+    .click(page.flawsDrop2[Math.floor(Math.random()*page.flawsDrop2.length)])
     
 });
