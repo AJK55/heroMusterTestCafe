@@ -4,6 +4,10 @@ node_js: "8"
 before_install:
   - stty cols 80
 
+install:
+  - npm install lodash --save
+  - npm install moment --save
+
 dist: trusty
 sudo: required
 
