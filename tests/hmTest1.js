@@ -7,15 +7,15 @@ const page = new Page();
 const func = new Functions();
 
 var _ = require('lodash');
-var moment = require('moment');
+var moment = require('moment-timezone');
 
 fixture('HeroMuster Chracter Builder Form')
   .page(page.homeURL)
   .beforeEach(async t => {
-    console.log('starting....' + moment().format('MMMM Do YYYY, h:mm:ss a'));
+    console.log('starting....' + moment.tz('America/New_York').format('MMMM Do YYYY, h:mm:ss a'));
   })
   .afterEach(async t => {
-    console.log('ending....' + moment().format('MMMM Do YYYY, h:mm:ss a'));
+    console.log('ending....'   + moment.tz('America/New_York').format('MMMM Do YYYY, h:mm:ss a'));
   });
 
 
