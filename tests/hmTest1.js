@@ -1,14 +1,25 @@
-import { Selector} from 'testcafe'
+import {
+  Selector
+} from 'testcafe'
 import Page from './hmPageModel';
 import Functions from './hmPMFunctions';
 const page = new Page();
 const func = new Functions();
 
+var _ = require('lodash');
+var moment = require('moment');
+
 fixture('HeroMuster Chracter Builder Form')
-  .page(page.homeURL);
+  .page(page.homeURL)
+  .beforeEach(async t => {
+    console.log('starting....' + moment().format('MMMM Do YYYY, h:mm:ss a'));
+  })
+  .afterEach(async t => {
+    console.log('ending....' + moment().format('MMMM Do YYYY, h:mm:ss a'));
+  });
 
 
-test('Confirm Page', async t=> {
+test('Confirm Page', async t => {
   await t
     .expect(func.getPageUrl()).eql(page.homeURL)
   await t
@@ -17,7 +28,7 @@ test('Confirm Page', async t=> {
     .expect(page.pageHeader.innerText).eql(page.pageHeaderText)
 });
 
-test('Complete Form', async t=> {
+test('Complete Form', async t => {
   await t
     .expect(func.getPageUrl()).eql(page.homeURL)
   await t
@@ -29,7 +40,7 @@ test('Complete Form', async t=> {
   await t
     .typeText(page.characterName, page.characterNameText)
   await t
-    .typeText(page.archetype, page.archetypes[Math.floor(Math.random()*page.archetypes.length)])
+    .typeText(page.archetype, page.archetypes[Math.floor(Math.random() * page.archetypes.length)])
   //randomly selects from page.archetypes = page.archetypes[Math.floor(Math.random()*page.archetypes.length)];
   await t
     .typeText(page.level, page.levelText.toString())
@@ -73,18 +84,18 @@ test('Complete Form', async t=> {
     .typeText(page.protection, page.protectionValue.toString())
   await t
     .click(page.perks1)
-    .click(page.perksDrop1[Math.floor(Math.random()*page.perksDrop1.length)]) 
+    .click(page.perksDrop1[Math.floor(Math.random() * page.perksDrop1.length)])
   await t
     .click(page.perks2)
-    .click(page.perksDrop2[Math.floor(Math.random()*page.perksDrop2.length)]) 
+    .click(page.perksDrop2[Math.floor(Math.random() * page.perksDrop2.length)])
   await t
     .click(page.flaws1)
-    .click(page.flawsDrop1[Math.floor(Math.random()*page.flawsDrop1.length)])
+    .click(page.flawsDrop1[Math.floor(Math.random() * page.flawsDrop1.length)])
   await t
     .click(page.flwas2)
-    .click(page.flawsDrop2[Math.floor(Math.random()*page.flawsDrop2.length)])
+    .click(page.flawsDrop2[Math.floor(Math.random() * page.flawsDrop2.length)])
   await t
     .click(page.saveCharacter)
     .wait(10000)
-     
+
 });

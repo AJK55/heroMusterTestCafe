@@ -19,6 +19,7 @@ export default class Page {
       this.descriptionText    = "Roman emperor from 161 to 180. He ruled with his adoptive brother, Lucius Verus, until Verus' death in 169, and with his son, Commodus, from 177. He was the last of the rulers traditionally known as the Five Good Emperors."
       ];
     
+    //can replace with lodash - _.random(2) or _.random(0, 2)
     this.attributes = [
       this.agilityValue       = func.randomInt(0, 2),
       this.fortitudeValue     = func.randomInt(0, 2),
@@ -40,6 +41,7 @@ export default class Page {
       this.protectionValue    = func.randomInt(0, 2),
       
     ];
+    
     
     this.pageElements = [
       this.pageTitle      = Selector('title'),
