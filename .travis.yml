@@ -8,6 +8,7 @@ install:
   - npm install testcafe
   - npm install lodash
   - npm install moment
+  - npm install moment-timezone
 
 dist: trusty
 sudo: required
