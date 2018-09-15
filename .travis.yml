@@ -5,6 +5,7 @@ before_install:
   - stty cols 80
 
 install:
+  - npm install testcafe
   - npm install lodash
   - npm install moment
 
